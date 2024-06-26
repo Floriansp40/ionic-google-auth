@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="full" (click)="signIn()" *ngIf="!user">
+    <ion-icon name="logo-google" slot="start"></ion-icon>Sign la bien
+  </ion-button>
+  <ion-button expand="full" (click)="signOut()" *ngIf="user">Sign out</ion-button>
+  <ion-button expand="full" (click)="refresh()" *ngIf="!user">Refresh</ion-button>
+</ion-content>
